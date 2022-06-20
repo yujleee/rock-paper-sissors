@@ -1,0 +1,119 @@
+.intro {
+  &-image-group {
+    margin: 4.5rem 0 7.5rem;
+
+    img {
+      display: inline-block;
+      width: 12rem;
+      height: auto;
+
+      animation-iteration-count: infinite;
+      animation-name: waving;
+      animation-timing-function: ease-in-out;
+    }
+
+    .img-rock {
+      margin-right: 2rem;
+      animation-duration: 2s;
+      transform-origin: top left;
+    }
+
+    .img-paper {
+      animation-duration: 1s;
+    }
+
+    .img-sissor {
+      animation-duration: 1.8s;
+      transform-origin: -0.6rem;
+    }
+  }
+
+  &-title {
+    font-family: $font-round;
+    font-size: 5.8rem;
+    color: $color-white;
+    text-align: center;
+  }
+
+  .start-button {
+    @include flexbox;
+    width: 15rem;
+    height: 4.4rem;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    color: $color-gray-background;
+    background-color: $color-neon-yellow;
+    border-radius: 4.8rem;
+    transition: background-color 300ms ease-in-out;
+
+    &:active {
+      background-color: $color-neon-cyan;
+    }
+  }
+
+  @include responsive(T) {
+    &-title {
+      font-size: 7.5rem;
+      letter-spacing: 0.7rem;
+      color: $color-white;
+    }
+
+    &-image-group {
+      margin: 8rem 0 10rem;
+
+      img {
+        width: 20rem;
+      }
+
+      .img-rock {
+        margin-right: 2.6rem;
+      }
+    }
+
+    .start-button {
+      width: 20rem;
+      height: 5rem;
+      font-size: 2.5rem;
+    }
+  }
+
+  @include responsive(D) {
+    &-image-group {
+      margin: 10rem 0;
+
+      img {
+        width: 25rem;
+      }
+
+      .img-rock {
+        margin-right: 2.6rem;
+      }
+    }
+
+    &-title {
+      font-size: 10rem;
+      letter-spacing: 0.5rem;
+    }
+
+    .start-button {
+      &:hover {
+        background-color: $color-neon-cyan;
+      }
+    }
+  }
+}
+
+@keyframes waving {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-50deg);
+  }
+
+  50% {
+    transform: translate3d(0, -0.3em, 0) rotate(-30deg);
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0) rotate(-50deg);
+  }
+}
