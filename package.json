@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/yujleee/rock-paper-sissors#readme",
   "dependencies": {
-    "sass": "^1.52.3"
+    "sass": "^1.52.3",
+    "sass-lint": "^1.13.1"
   }
 }
