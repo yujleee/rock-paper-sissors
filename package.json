@@ -1,0 +1,23 @@
+{
+  "name": "rock-paper-sissors",
+  "version": "1.0.0",
+  "description": "minigame rock paper sissors with Vanila JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yujleee/rock-paper-sissors.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yujleee/rock-paper-sissors/issues"
+  },
+  "homepage": "https://github.com/yujleee/rock-paper-sissors#readme",
+  "dependencies": {
+    "sass": "^1.52.3"
+  }
+}
