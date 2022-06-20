@@ -1,0 +1,7 @@
+main {
+  @include flexbox;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background-color: $color-gray-background;
+}
