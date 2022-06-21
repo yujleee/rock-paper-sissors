@@ -16,6 +16,7 @@
       <div class="image-wrapper">
         <section class="image-area computer">
           <h1 class="area-title">Computer</h1>
+          <div class="timer" aria-label="3초">3</div>
           <figure>
             <img src="./assets/img_rock.png" alt="" />
             <figcaption class="visually-hidden">컴퓨터가 낸 것은</figcaption>
@@ -42,9 +43,14 @@
           <img src="./assets/img_sissor.png" alt="가위" />
         </button>
       </div>
+
+      <article class="result">
+        <h1 class="resultText"></h1>
+      </article>
     </main>
-    <script src="./js/computer-image.js"></script>
-    <script src="./js/player-image.js"></script>
-    <script src="./js/judgment.js"></script>
+    <script type="module" src="./js/computer-image.js"></script>
+    <script type="module" src="./js/player-image.js"></script>
+    <script type="module" src="./js/judgment.js"></script>
+    <script type="module" src="./js/count.js"></script>
   </body>
 </html>

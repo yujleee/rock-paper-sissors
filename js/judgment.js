@@ -13,7 +13,7 @@ const caseWin = {
   sissor: 'rock',
 };
 
-const getImage = () => {
+export const getImage = () => {
   imageAreas.forEach((section) => {
     const src = section.querySelector('figure img').src;
     const cutStart = src.indexOf('_');
@@ -23,7 +23,7 @@ const getImage = () => {
   });
 };
 
-const judgement = () => {
+export const judgement = () => {
   let result;
   const [computer, player] = images;
 
@@ -33,17 +33,3 @@ const judgement = () => {
 
   return resultText[result];
 };
-
-const playing = () => {
-  let seconds = 3;
-  const timer = setInterval(() => {
-    if (seconds <= 0) {
-      clearInterval(timer);
-      getImage();
-      console.log(judgement());
-    }
-    seconds -= 1;
-  }, 1000);
-};
-
-playing();

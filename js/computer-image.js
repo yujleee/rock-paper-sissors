@@ -1,4 +1,4 @@
-const computerImage = document.querySelector('.image-area.computer');
+export const computerImage = document.querySelector('.image-area.computer figure img');
 
 const imageList = {
   0: 'rock',
@@ -13,8 +13,7 @@ const getRandom = () => {
 const changeComputerImage = () => {
   const randomNumber = getRandom();
   const imageName = imageList[randomNumber];
-  const image = computerImage.querySelector('figure img');
-  image.src = `./assets/img_${imageName}.png`;
+  computerImage.src = `./assets/img_${imageName}.png`;
 };
 
 changeComputerImage();

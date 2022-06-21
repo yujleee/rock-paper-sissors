@@ -1,0 +1,35 @@
+.timer {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  z-index: 500;
+  font-size: 15rem;
+  font-weight: 700;
+  color: $color-neon-yellow;
+  text-shadow: 0 4px 20px rgba(63, 65, 80, 0.3);
+  transform: translate(-40%, -50%);
+
+  &.done {
+    display: none;
+  }
+}
+
+.result {
+  position: absolute;
+  bottom: 0;
+  z-index: 1000;
+  display: none;
+  width: 100vw;
+  height: 70vh;
+  padding: 0 2rem;
+
+  &.is-active {
+    @include flexbox;
+    background: linear-gradient(to top, $color-gray-background, transparent);
+  }
+
+  .resultText {
+    font-size: 5rem;
+    text-align: center;
+  }
+}
