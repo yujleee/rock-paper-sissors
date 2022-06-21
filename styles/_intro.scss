@@ -1,5 +1,13 @@
 .intro {
+  &-title {
+    font-family: $font-round;
+    font-size: 5.8rem;
+    color: $color-white;
+    text-align: center;
+  }
+
   &-image-group {
+    @include flexbox;
     margin: 4.5rem 0 7.5rem;
 
     img {
@@ -26,13 +34,6 @@
       animation-duration: 1.8s;
       transform-origin: -0.6rem;
     }
-  }
-
-  &-title {
-    font-family: $font-round;
-    font-size: 5.8rem;
-    color: $color-white;
-    text-align: center;
   }
 
   .start-button {
@@ -79,6 +80,11 @@
   }
 
   @include responsive(D) {
+    &-title {
+      font-size: 10rem;
+      letter-spacing: 0.5rem;
+    }
+
     &-image-group {
       margin: 10rem 0;
 
@@ -89,11 +95,6 @@
       .img-rock {
         margin-right: 2.6rem;
       }
-    }
-
-    &-title {
-      font-size: 10rem;
-      letter-spacing: 0.5rem;
     }
 
     .start-button {
