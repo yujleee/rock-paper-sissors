@@ -1,0 +1,129 @@
+.game {
+  .image-wrapper {
+    margin-bottom: 5rem;
+
+    .image-area {
+      position: relative;
+
+      .area-title {
+        position: absolute;
+        top: -3rem;
+        left: 50%;
+        z-index: 1;
+        margin-bottom: 1.6rem;
+        font-size: 4rem;
+        font-style: italic;
+        letter-spacing: -0.3rem;
+        color: $color-white;
+        text-align: center;
+        transform: translateX(-50%);
+      }
+
+      figure {
+        position: relative;
+        z-index: 100;
+
+        img {
+          display: block;
+          width: 14rem;
+          height: auto;
+        }
+      }
+
+      &.player {
+        figure {
+          img {
+            transform: scaleX(-1);
+          }
+        }
+      }
+    }
+  }
+
+  .vs {
+    @include flexbox;
+    padding: 2rem 0 7rem;
+    font-family: $font-round;
+    font-size: 8rem;
+    font-weight: 700;
+    line-height: 4rem;
+    letter-spacing: 0.5rem;
+  }
+
+  .button-group {
+    @include flexbox;
+    width: 100%;
+
+    .play-button {
+      margin-right: 2rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      img {
+        display: block;
+        width: 8rem;
+        height: auto;
+        opacity: 0.4;
+        transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+
+        &:active {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .image-wrapper {
+      @include flexbox;
+      width: 100%;
+      margin: 10rem 0;
+
+      .image-area {
+        .area-title {
+          font-size: 6rem;
+        }
+
+        figure {
+          position: relative;
+          z-index: 100;
+
+          img {
+            display: block;
+            width: 25rem;
+            height: auto;
+          }
+        }
+      }
+    }
+
+    .vs {
+      margin: 0 5rem;
+    }
+
+    .button-group {
+      .play-button {
+        margin-right: 3rem;
+        img {
+          display: block;
+          width: 13rem;
+          height: auto;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        &:hover {
+          img {
+            opacity: 1;
+            transform: scale(1.2);
+          }
+        }
+      }
+    }
+  }
+}
