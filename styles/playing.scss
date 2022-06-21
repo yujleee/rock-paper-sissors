@@ -44,7 +44,7 @@
     @include flexbox;
     padding: 2rem 0 7rem;
     font-family: $font-round;
-    font-size: 8rem;
+    font-size: 6rem;
     font-weight: 700;
     line-height: 4rem;
     letter-spacing: 0.5rem;
@@ -102,6 +102,7 @@
 
     .vs {
       margin: 0 5rem;
+      font-size: 8rem;
     }
 
     .button-group {
