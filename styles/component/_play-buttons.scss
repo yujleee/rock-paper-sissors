@@ -1,0 +1,55 @@
+.button-group {
+  @include flexbox;
+  width: 100%;
+
+  .play-button {
+    margin-right: 2rem;
+
+    img {
+      display: block;
+      width: 8rem;
+      height: auto;
+      opacity: 0.4;
+      transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &.is-active {
+      img {
+        opacity: 1;
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  @include responsive(T) {
+    .play-button {
+      margin-right: 3rem;
+
+      img {
+        display: block;
+        width: 13rem;
+        height: auto;
+
+        &:hover {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+
+      &.is-active {
+        img {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
