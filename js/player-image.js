@@ -1,12 +1,20 @@
 const buttonList = document.querySelectorAll('.play-button');
-const playerImage = document.querySelector('.image-area.player');
+const playerImage = document.querySelector('.image-area.player figure img');
 
 const changePlayerImage = (seletedImage) => {
-  const image = playerImage.querySelector('figure img');
-  image.src = `./assets/img_${seletedImage}.png`;
+  playerImage.classList.add('is-active');
+  playerImage.src = `./assets/img_${seletedImage}.png`;
 };
 
-function handlePlayerImage() {
+function handlePlayerImage(e) {
+  e.preventDefault();
+  const buttonGroup = this.parentNode;
+  const active = buttonGroup.querySelector('.is-active');
+  if (active) {
+    active.classList.remove('is-active');
+  }
+  e.currentTarget.classList.add('is-active');
+
   const clickedButton = this.classList.item(1);
   changePlayerImage(clickedButton);
 }
