@@ -24,16 +24,32 @@
         z-index: 100;
 
         img {
-          display: block;
           width: 14rem;
           height: auto;
+          transition: transform 300ms ease-in-out;
+
+          &.is-active {
+            transform: translate3d(0, 0, 0);
+          }
+        }
+      }
+
+      &.computer {
+        figure img {
+          transform: translate3d(-500%, 0, 0);
+
+          &.is-active {
+            transform: translate3d(0, 0, 0);
+          }
         }
       }
 
       &.player {
-        figure {
-          img {
-            transform: scaleX(-1);
+        figure img {
+          transform: scaleX(-1) translate3d(-500%, 0, 0);
+
+          &.is-active {
+            transform: scaleX(-1) translate3d(0, 0, 0);
           }
         }
       }
@@ -57,18 +73,20 @@
     .play-button {
       margin-right: 2rem;
 
-      &:last-child {
-        margin-right: 0;
-      }
-
       img {
         display: block;
         width: 8rem;
         height: auto;
         opacity: 0.4;
         transition: opacity 200ms ease-in-out, transform 200ms ease-in-out;
+      }
 
-        &:active {
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.is-active {
+        img {
           opacity: 1;
           transform: scale(1.2);
         }
@@ -108,21 +126,27 @@
     .button-group {
       .play-button {
         margin-right: 3rem;
+
         img {
           display: block;
           width: 13rem;
           height: auto;
+
+          &:hover {
+            opacity: 1;
+            transform: scale(1.2);
+          }
         }
 
-        &:last-child {
-          margin-right: 0;
-        }
-
-        &:hover {
+        &.is-active {
           img {
             opacity: 1;
             transform: scale(1.2);
           }
+        }
+
+        &:last-child {
+          margin-right: 0;
         }
       }
     }
