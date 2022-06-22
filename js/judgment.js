@@ -27,6 +27,7 @@ export const judgement = () => {
   let result;
   const [computer, player] = images;
 
+  if (player === 'default') result = 0;
   if (computer === player) result = 0;
   else if (player === caseWin[computer]) result = 2;
   else result = 1;
