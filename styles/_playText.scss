@@ -15,21 +15,32 @@
 }
 
 .result {
+  @include flexbox;
   position: absolute;
   bottom: 0;
   z-index: 1000;
   display: none;
+  flex-direction: column;
   width: 100vw;
-  height: 70vh;
+  height: 50vh;
   padding: 0 2rem;
 
   &.is-active {
     @include flexbox;
-    background: linear-gradient(to top, $color-gray-background, transparent);
+    background: linear-gradient(to top, $color-black, transparent);
   }
 
   .resultText {
+    margin-bottom: 2rem;
     font-size: 5rem;
     text-align: center;
+  }
+
+  @include responsive(T) {
+    height: 88vh;
+  }
+
+  @include responsive(D) {
+    height: 80vh;
   }
 }
