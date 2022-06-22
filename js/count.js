@@ -25,4 +25,6 @@ const playing = () => {
   sound.play();
 };
 
-playing();
+setTimeout(() => {
+  playing();
+}, 1000);
