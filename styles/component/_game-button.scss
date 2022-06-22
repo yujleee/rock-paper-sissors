@@ -24,10 +24,8 @@
   }
 
   @include responsive(D) {
-    .start-button {
-      &:hover {
-        background-color: $color-neon-cyan;
-      }
+    &:hover {
+      background-color: $color-neon-cyan;
     }
   }
 }
