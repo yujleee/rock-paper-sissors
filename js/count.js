@@ -5,6 +5,8 @@ const timerText = document.querySelector('.image-area .timer');
 const resultArea = document.querySelector('.result');
 const resultText = resultArea.querySelector('.resultText');
 
+const sound = new Audio('../assets/count.mp3');
+
 const playing = () => {
   let seconds = 3;
   const timer = setInterval(() => {
@@ -19,7 +21,8 @@ const playing = () => {
       resultText.innerHTML = `${result}`;
     }
     seconds -= 1;
-  }, 800);
+  }, 650);
+  sound.play();
 };
 
 playing();
