@@ -27,7 +27,7 @@ const playing = () => {
       resultText.innerHTML = `${result}`;
     }
     seconds -= 1;
-  }, 650);
+  }, 700);
   sound.play();
 };
 

@@ -1,13 +1,16 @@
 .start-timer-layer {
   position: absolute;
+  top: 50%;
+  left: 0;
   z-index: 900;
   display: none;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
   cursor: pointer;
-  background-color: rgba($color-gray-background, 0.9);
+  background: linear-gradient(to top, transparent, $color-gray-background 30%, transparent);
   opacity: 1;
+  transform: translateY(-50%);
   transition: opacity 200ms ease-in-out;
 
   .start-timer-button {
