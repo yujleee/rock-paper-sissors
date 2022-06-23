@@ -1,9 +1,13 @@
 import { computerImage } from './computer-image.js';
 import { getImage, judgement } from './judgment.js';
+import { checkBrowser } from './check-browser.js';
 
 const timerText = document.querySelector('.image-area .timer');
 const resultArea = document.querySelector('.result');
 const resultText = resultArea.querySelector('.resultText');
+
+const browser = checkBrowser();
+const startTimerLayer = document.querySelector('.start-timer-layer');
 
 const sound = new Audio('../assets/count.mp3');
 
@@ -25,6 +29,13 @@ const playing = () => {
   sound.play();
 };
 
-setTimeout(() => {
+function startGameOnSafari() {
   playing();
-}, 1000);
+  startTimerLayer.classList.toggle('is-active');
+}
+
+if (browser !== 'Safari') {
+  playing();
+}
+
+startTimerLayer.addEventListener('click', startGameOnSafari);

@@ -1,0 +1,59 @@
+.start-timer-layer {
+  position: absolute;
+  z-index: 900;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba($color-gray-background, 0.9);
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+
+  .start-timer-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: auto;
+    padding: 1rem;
+    font-size: 4rem;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: -0.3rem;
+    color: $color-neon-cyan;
+    transform: translate(-50%, -50%);
+    transition: color 200ms ease-in-out;
+
+    @include responsive(T) {
+      font-size: 6.4rem;
+    }
+  }
+
+  &:active {
+    .start-timer-button {
+      color: $color-neon-pink;
+    }
+  }
+
+  @include responsive(D) {
+    &:hover {
+      .start-timer-button {
+        color: $color-neon-pink;
+      }
+    }
+  }
+
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      &.safari-only {
+        display: block;
+      }
+
+      &.safari-only.is-active {
+        display: none;
+        opacity: 0;
+      }
+    }
+  }
+}
