@@ -15,6 +15,8 @@ const playing = () => {
   let seconds = 3;
   const timer = setInterval(() => {
     timerText.innerHTML = `${seconds}`;
+    timerText.setAttribute('aria-label', `${seconds}초`);
+
     if (seconds <= 0) {
       clearInterval(timer);
       getImage();
