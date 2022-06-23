@@ -18,6 +18,7 @@
   @include flexbox;
   position: absolute;
   bottom: 0;
+  left: 0;
   z-index: 1000;
   display: none;
   flex-direction: column;
@@ -27,7 +28,7 @@
 
   &.is-active {
     @include flexbox;
-    background: linear-gradient(to top, $color-black, transparent);
+    background: linear-gradient(to top, $color-gray-background 30%, transparent);
   }
 
   .resultText {
