@@ -36,8 +36,12 @@ function startGameOnSafari() {
   startTimerLayer.classList.toggle('is-active');
 }
 
-if (browser !== 'Safari') {
-  playing();
+function startGame() {
+  if (browser === 'Safari') {
+    startTimerLayer.addEventListener('click', startGameOnSafari);
+  } else {
+    playing();
+  }
 }
 
-startTimerLayer.addEventListener('click', startGameOnSafari);
+window.addEventListener('load', startGame);
