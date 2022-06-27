@@ -1,5 +1,5 @@
 import { computerImage } from './computer-image.js';
-import { getImage, judgement } from './judgment.js';
+import { getImage, judgement } from './judgement.js';
 import { checkBrowser } from './check-browser.js';
 
 const timerText = document.querySelector('.image-area .timer');
