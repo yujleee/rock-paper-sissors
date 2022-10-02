@@ -2,11 +2,16 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6dc03367-5620-4755-9357-732b01c3a787/deploy-status)](https://app.netlify.com/sites/lets-rock-paper-sissors/deploys)
 
+![image](https://user-images.githubusercontent.com/82587107/193454368-a423bdaf-9745-481d-965d-2894a7daf056.png)
+
 minigame rock paper sissors with Vanila JS
 
 HTML5, SCSS, JavaScript로 만들어본 가위바위보 미니게임! 아래 링크에서 직접 플레이가 가능합니다.
 
 https://lets-rock-paper-sissors.netlify.app/
+
+<br/>
+<br/>
 
 ## 기능
 
